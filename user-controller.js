@@ -31,7 +31,7 @@ module.exports.addUser = function (req, res) {
 //list
 module.exports.getAllUsers = function (req, res) {
 
-    UserModel.find().populate("role").exec(function (err, data) {
+    UserModel.find().populate("user").exec(function (err, data) {
         if (err) {
             res.json({ msg: "SMW", data: err, status: -1 })//-1  [ 302 404 500 ]
         } else {
